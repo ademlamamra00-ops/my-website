@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 150px;
+    font-size: 45px;
+}
+
+p {
+    font-size: 20px;
+}
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}img {
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.seriea-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    background: #0c1ea7;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.seriea-button:hover {
+    transform: scale(1.08);
+}
+.clubs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.clubs a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.clubs img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
