@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111827;
-    color: white;
+    background: #feffff;
+    color: rgb(4, 12, 71);
     text-align: center;
 }
 
@@ -299,4 +299,345 @@ button:hover {
     color: #000000;
     font-size: 15px !important;
     margin-bottom: 0;
+    
+}
+/* =========================================
+   📱💻 تصميم متوافق مع الهاتف والكمبيوتر
+   ========================================= */
+
+/* منع خروج العناصر خارج الشاشة */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* الصور تتكيف مع حجم الشاشة */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* الصفحة الرئيسية للنادي */
+.team-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* معلومات النادي */
+.team-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* أقسام النادي */
+.team-section {
+    width: 100%;
+}
+
+/* قائمة اللاعبين */
+.players-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* قائمة البطولات */
+.trophies-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* الأزرار */
+.back-button {
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* =========================================
+   📱 الهواتف
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .team-page {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .team-logo {
+        width: 150px;
+        max-width: 60%;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .team-description {
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    /* معلومات النادي تصبح عمودين */
+    .team-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .team-info > div {
+        padding: 12px;
+    }
+
+    /* اللاعبين */
+    .players-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* البطولات */
+    .trophies-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .team-section {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .back-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* =========================================
+   📱 الهواتف الصغيرة جدًا
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .team-page {
+        width: 96%;
+    }
+
+    .team-logo {
+        width: 120px;
+    }
+
+    .team-description {
+        font-size: 15px;
+    }
+
+    /* معلومات النادي تصبح خانة واحدة */
+    .team-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* اللاعبين خانة واحدة */
+    .players-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* البطولات خانة واحدة */
+    .trophies-list {
+        grid-template-columns: 1fr;
+    }
+
+    .team-section {
+        padding: 12px;
+    }
+
+    .team-info p,
+    .team-info strong {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   💻 الشاشات الكبيرة
+   ========================================= */
+
+@media (min-width: 1200px) {
+
+    .team-page {
+        max-width: 1200px;
+    }
+
+    .team-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .players-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trophies-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* =========================================
+   🌙 زر الوضع الليلي
+   ========================================= */
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #222;
+    color: white;
+
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+
+/* تأثير عند مرور الماوس */
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+/* تأثير عند الضغط */
+
+.theme-toggle:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================================
+   🌙 الوضع الليلي
+   ========================================= */
+
+body.dark-mode {
+    background: #101218;
+    color: white;
+}
+
+
+/* الصفحة */
+
+body.dark-mode .team-page {
+    background: #181b22;
+    color: white;
+}
+
+
+/* الأقسام */
+
+body.dark-mode .team-section {
+    background: #20242c;
+    color: white;
+}
+
+
+/* معلومات النادي */
+
+body.dark-mode .team-info > div {
+    background: #20242c;
+    color: white;
+}
+
+
+/* اللاعبين */
+
+body.dark-mode .player {
+    background: #20242c;
+    color: white;
+}
+
+
+/* البطولات */
+
+body.dark-mode .trophy {
+    background: #20242c;
+    color: white;
+}
+
+
+/* النصوص */
+
+body.dark-mode p {
+    color: #dddddd;
+}
+
+
+/* العناوين */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode strong {
+    color: white;
+}
+
+
+/* القوائم */
+
+body.dark-mode li {
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   ☀️ الزر أثناء الوضع الليلي
+   ========================================= */
+
+body.dark-mode .theme-toggle {
+    background: #f5f5f5;
+    color: #111;
 }
